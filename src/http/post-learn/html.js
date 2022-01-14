@@ -1,5 +1,5 @@
 const enhance = require('@enhance/ssr')
-const { top, bottom } = require('@architect/views/page-layout.js')
+const { top, bottom } = require('@architect/shared/page-layout')
 
 module.exports = async function HTML(req) {
   const { templateCode = '' } = req.body
@@ -8,6 +8,7 @@ module.exports = async function HTML(req) {
   if (templateCode) htmlOut = html`${templateCode}`
   try {
     html = enhance({
+      templates: './node_modules/@architect/shared/templates',
       state: {
         templateCode,
         htmlOut,
