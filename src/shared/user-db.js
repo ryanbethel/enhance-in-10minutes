@@ -64,6 +64,7 @@ async function list() {
   })
   let users = []
   for await (let user of pages) {
+    // eslint-disable-next-line no-unused-vars
     const { table, key, ...next } = user
     users.push(next)
   }
