@@ -5,7 +5,13 @@ let html = enhance()
 module.exports = async function HTML(req) {
   try {
     html = enhance({
-      state: {},
+      state: {
+        templateCode: `
+        <my-h1>Template Code</my-h1>
+        <p>You can edit this code</p>
+        <p>You can use any templates that are in the template directory (i.e. my-h1)</p>
+    `,
+      },
     })
 
     return {
