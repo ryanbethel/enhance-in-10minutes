@@ -5,7 +5,7 @@ module.exports = async function HTML() {
   let html
   try {
     html = enhance({
-      templates: './node_modules/@architect/shared/templates',
+      templates: './@architect/shared/templates',
       state: {
         templateCode: `
         <my-h1>Template Code</my-h1>
