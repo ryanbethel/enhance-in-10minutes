@@ -6,7 +6,7 @@ fingerprint true
 folder public
 
 @http
-get /learn
+get /
 post /learn
 
 #Fingerprinted Modules and components
