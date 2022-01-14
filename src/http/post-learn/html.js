@@ -4,11 +4,13 @@ const { top, bottom } = require('@architect/shared/page-layout')
 module.exports = async function HTML(req) {
   const { templateCode = '' } = req.body
   let htmlOut
-  let html
+  let html = enhance({
+    templates: '@architect/shared/templates',
+  })
   if (templateCode) htmlOut = html`${templateCode}`
   try {
     html = enhance({
-      templates: './node_modules/@architect/shared/templates',
+      templates: '@architect/shared/templates',
       state: {
         templateCode,
         htmlOut,
