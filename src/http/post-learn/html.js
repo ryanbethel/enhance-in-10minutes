@@ -8,7 +8,7 @@ module.exports = async function HTML(req) {
   if (templateCode) htmlOut = html`${templateCode}`
   try {
     html = enhance({
-      templates: './@architect/shared/templates',
+      templates: './node_modules/@architect/shared/templates',
       state: {
         templateCode,
         htmlOut,
