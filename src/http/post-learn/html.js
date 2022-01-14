@@ -1,5 +1,5 @@
 const enhance = require('@enhance/ssr')
-const { top, bottom } = require('@architect/views/page-layout')
+const { top, bottom } = require('@architect/views/page-layout.js')
 
 module.exports = async function HTML(req) {
   const { templateCode = '' } = req.body
