@@ -1,8 +1,8 @@
 const enhance = require('@enhance/ssr')
 const { top, bottom } = require('@architect/views/page-layout')
-let html = enhance()
 
 module.exports = async function HTML() {
+  let html
   try {
     html = enhance({
       state: {

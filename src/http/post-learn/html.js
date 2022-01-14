@@ -1,10 +1,10 @@
 const enhance = require('@enhance/ssr')
 const { top, bottom } = require('@architect/views/page-layout')
-let html = enhance()
 
 module.exports = async function HTML(req) {
   const { templateCode = '' } = req.body
   let htmlOut
+  let html
   if (templateCode) htmlOut = html`${templateCode}`
   try {
     html = enhance({
